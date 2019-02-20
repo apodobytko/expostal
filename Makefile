@@ -29,7 +29,7 @@ libpostal:
 	$(MIX) compile
 
 priv/expostal.so: src/expostal.c
-	$(CC) $(CFLAGS) -shared $(LDFLAGS) -o $@ src/expostal.c
+	$(CC) -shared $(LDFLAGS) -o $@ src/expostal.c $(CFLAGS)
 
 clean:
 	$(MIX) clean
